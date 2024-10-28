@@ -7,6 +7,7 @@ from faker import Faker
 from app import app
 from models import db, Message
 
+
 fake = Faker()
 
 usernames = [fake.first_name() for i in range(4)]
@@ -32,3 +33,4 @@ def make_messages():
 if __name__ == '__main__':
     with app.app_context():
         make_messages()
+        
